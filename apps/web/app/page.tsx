@@ -1,6 +1,7 @@
 export const dynamic = "force-static"
 
 import { Button } from "@workspace/ui/components/button"
+import Link from "next/link"
 
 export default function Page() {
   return (
@@ -14,7 +15,11 @@ export default function Page() {
         </p>
 
         <div className="mx-auto mt-4 w-fit">
-          <Button className="p-5">登録なしで試してみる</Button>
+          <Link href="/app/home">
+            <Button variant="outline" className="p-5">
+              登録なしで試してみる
+            </Button>
+          </Link>
         </div>
       </div>
 
@@ -26,9 +31,11 @@ export default function Page() {
           未来を変えるためには小さな一歩から。アカウント登録なしで始められます。運動を始めようと思っているそこのあなたもまずはこのアプリから始めてみましょう
         </p>
         <div className="mx-auto mt-4 w-fit">
-          <Button className="bg-background p-5 text-lg text-primary/80">
-            登録なしで試してみる
-          </Button>
+          <Link href="/app/home">
+            <Button className="bg-background p-5 text-lg text-primary/80">
+              登録なしで試してみる
+            </Button>
+          </Link>
         </div>
       </div>
 
@@ -44,9 +51,11 @@ export default function Page() {
         </p>
 
         <div className="mx-auto mt-4 w-fit">
-          <Button className="bg-background p-5 text-lg font-bold text-muted-foreground">
-            試してみる
-          </Button>
+          <Link href="/app/home">
+            <Button className="bg-background p-5 text-lg font-bold text-muted-foreground">
+              登録なしで試してみる
+            </Button>
+          </Link>
         </div>
       </div>
 
@@ -71,10 +80,13 @@ export default function Page() {
           </div>
         ))}
       </div>
-
-      <div className="mx-auto mt-4 w-fit">
-        <Button className="p-5">試してみる</Button>
-      </div>
+      <Link href="/app/home">
+        <div className="mx-auto mt-4 w-fit">
+          <Button variant="outline" className="p-5">
+            登録なしで試してみる
+          </Button>
+        </div>
+      </Link>
     </div>
   )
 }
