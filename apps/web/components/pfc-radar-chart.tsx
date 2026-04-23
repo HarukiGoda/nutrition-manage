@@ -10,9 +10,7 @@ import {
   RadarChart,
   PolarGrid,
   PolarAngleAxis,
-  PolarRadiusAxis,
   Radar,
-  Legend,
   ResponsiveContainer,
 } from "recharts"
 
