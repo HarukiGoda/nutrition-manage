@@ -7,7 +7,13 @@ import {
   CardDescription,
   CardTitle,
 } from "@workspace/ui/components/card"
-import { BananaIcon, CalendarCheckIcon, CookingPotIcon, FlameIcon, PlusCircle } from "lucide-react"
+import {
+  BananaIcon,
+  CalendarCheckIcon,
+  CookingPotIcon,
+  FlameIcon,
+  PlusCircle,
+} from "lucide-react"
 
 export default function Page() {
   const pfcData = {
@@ -78,12 +84,18 @@ export default function Page() {
             <CalendarCheckIcon />
             <p className="pl-1">週間記録</p>
           </CardTitle>
-          <CardDescription className="grid grid-cols-7 mt-12 gap-1">
-           {["日", "月", "火", "水", "木", "金", "土"].map(d => 
-            <div><div className="rounded-full bg-amber-600 w-6 h-fit py-0.5 text-center text-primary font-semibold aspect-square">{d}</div
-           ></div>)}
+          <CardDescription className="mt-12 grid grid-cols-7 gap-1">
+            {["日", "月", "火", "水", "木", "金", "土"].map((d) => (
+              <div key={d}>
+                <div className="aspect-square h-fit w-6 rounded-full bg-amber-600 py-0.5 text-center font-semibold text-primary">
+                  {d}
+                </div>
+              </div>
+            ))}
 
-           <div className="col-span-full mt-8">今週は 7 / 7 日目標のタンパク質摂取量を達成することができました。</div>
+            <div className="col-span-full mt-8">
+              今週は 7 / 7 日目標のタンパク質摂取量を達成することができました。
+            </div>
           </CardDescription>
         </CardContent>
       </Card>
@@ -94,11 +106,20 @@ export default function Page() {
             <p className="pl-1">カロリー</p>
           </CardTitle>
           <CardDescription className="">
-           <div className="text-primary text-xl font-semibold mt-10"> <span className="text-cyan-600">2300</span> / 2500 KCal</div>
-           <div className="text-xs text-primary/80 mt-4">昨日</div>
-           <div className="text-primary text-md font-semibold"> <span className="text-amber-600">2700</span> / 2500 KCal</div>
-           <div className="text-xs text-primary/80">一昨日</div>
-           <div className="text-primary text-md font-semibold"> <span className="text-cyan-600">2300</span> / 2500 KCal</div>
+            <div className="mt-10 text-xl font-semibold text-primary">
+              {" "}
+              <span className="text-cyan-600">2300</span> / 2500 KCal
+            </div>
+            <div className="mt-4 text-xs text-primary/80">昨日</div>
+            <div className="text-md font-semibold text-primary">
+              {" "}
+              <span className="text-amber-600">2700</span> / 2500 KCal
+            </div>
+            <div className="text-xs text-primary/80">一昨日</div>
+            <div className="text-md font-semibold text-primary">
+              {" "}
+              <span className="text-cyan-600">2300</span> / 2500 KCal
+            </div>
           </CardDescription>
         </CardContent>
       </Card>
