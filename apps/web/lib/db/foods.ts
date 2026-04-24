@@ -15,3 +15,7 @@ export const foodDB = new Dexie("Foods") as Dexie & {
 foodDB.version(1).stores({
   foods: "++id, name, protein, fat, carbs",
 })
+
+export function addFood(food: Omit<Food, "id">) {
+  return foodDB.foods.add(food)
+}

@@ -14,3 +14,7 @@ export const recipeItemDB = new Dexie("RecipeItemDB") as Dexie & {
 recipeItemDB.version(1).stores({
   recipeItems: "++id, recipeId, foodId, quantity",
 })
+
+export function addRecipeItem(recipeItem: Omit<RecipeItem, "id">) {
+  return recipeItemDB.recipeItems.add(recipeItem)
+}
