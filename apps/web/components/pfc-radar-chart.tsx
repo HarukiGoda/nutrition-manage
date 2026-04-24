@@ -55,7 +55,7 @@ export function PFCRadarChart({
     base: 100,
   }))
   return (
-    <ChartContainer config={chartConfig} className="-mb-10 h-55 w-full">
+    <ChartContainer config={chartConfig} className="-mb-10 h-full w-full">
       <ResponsiveContainer>
         <RadarChart data={data}>
           <PolarGrid />
