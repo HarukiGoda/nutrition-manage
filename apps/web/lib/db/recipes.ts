@@ -1,5 +1,9 @@
 import Dexie, { EntityTable } from "dexie"
 
+/**
+ * id: Auto-incremented unique
+ * name: Required
+ */
 export interface Recipe {
   id: number
   name: string
