@@ -7,6 +7,7 @@ import Dexie, { EntityTable } from "dexie"
  * protein: Required, in grams per 1g
  * fat: Required, in grams per 1g
  * carbs: Required, in grams per 1g
+ * amount: Optional, 1 peace of food's weight in grams
  */
 export interface Food {
   id: number
@@ -15,6 +16,7 @@ export interface Food {
   protein: number
   fat: number
   carbs: number
+  amount?: number
 }
 
 export const foodDB = new Dexie("Foods") as Dexie & {

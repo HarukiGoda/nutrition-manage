@@ -16,6 +16,7 @@ import {
   PlusCircle,
   Refrigerator,
 } from "lucide-react"
+import Link from "next/link"
 
 export default function Page() {
   const pfcData = {
@@ -62,9 +63,11 @@ export default function Page() {
             <CookingPotIcon className="h-fit w-4" />
             <p className="pl-1">自炊</p>
           </CardTitle>
-          <CardDescription className="flex aspect-square items-center">
-            <PlusCircle className="h-12 w-full" />
-          </CardDescription>
+          <Link href={"/app/record/cooking"}>
+            <CardDescription className="flex aspect-square items-center">
+              <PlusCircle className="h-12 w-full" />
+            </CardDescription>
+          </Link>
         </CardContent>
       </Card>
       <Card className="col-span-1">
@@ -73,9 +76,11 @@ export default function Page() {
             <BananaIcon className="h-fit w-4" />
             <p className="pl-1">間食</p>
           </CardTitle>
-          <CardDescription className="flex aspect-square items-center">
-            <PlusCircle className="h-12 w-full" />
-          </CardDescription>
+          <Link href={"/app/record/snacks"}>
+            <CardDescription className="flex aspect-square items-center">
+              <PlusCircle className="h-12 w-full" />
+            </CardDescription>
+          </Link>
         </CardContent>
       </Card>
       <Card className="col-span-1">
@@ -84,9 +89,11 @@ export default function Page() {
             <Refrigerator className="h-fit w-4" />
             <p className="pl-1">在庫管理</p>
           </CardTitle>
-          <CardDescription className="flex aspect-square items-center">
-            <PlusCircle className="h-12 w-full" />
-          </CardDescription>
+          <Link href={"/app/inventory"}>
+            <CardDescription className="flex aspect-square items-center">
+              <PlusCircle className="h-12 w-full" />
+            </CardDescription>
+          </Link>
         </CardContent>
       </Card>
 
@@ -96,19 +103,21 @@ export default function Page() {
             <FlameIcon />
             <p className="pl-1">カロリー</p>
           </CardTitle>
-          <CardDescription className="text-balance">
-            <div className="mt-4 text-xl font-semibold text-primary">
-              <span className="text-cyan-600">2300</span> / 2500 KCal
-            </div>
-            <div className="mt-4 text-xs text-primary/80">昨日</div>
-            <div className="text-md font-semibold text-primary">
-              <span className="text-amber-600">2700</span> / 2500 KCal
-            </div>
-            <div className="text-xs text-primary/80">一昨日</div>
-            <div className="text-md font-semibold text-primary">
-              <span className="text-cyan-600">2300</span> / 2500 KCal
-            </div>
-          </CardDescription>
+          <Link href={"/app/analytics/calories"}>
+            <CardDescription className="text-balance">
+              <div className="mt-4 text-xl font-semibold text-primary">
+                <span className="text-cyan-600">2300</span> / 2500 KCal
+              </div>
+              <div className="mt-4 text-xs text-primary/80">昨日</div>
+              <div className="text-md font-semibold text-primary">
+                <span className="text-amber-600">2700</span> / 2500 KCal
+              </div>
+              <div className="text-xs text-primary/80">一昨日</div>
+              <div className="text-md font-semibold text-primary">
+                <span className="text-cyan-600">2300</span> / 2500 KCal
+              </div>
+            </CardDescription>
+          </Link>
         </CardContent>
       </Card>
       <Card className="col-span-1">
